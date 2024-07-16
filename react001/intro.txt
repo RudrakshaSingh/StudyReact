@@ -1,9 +1,0 @@
-===WHY===
--type,job trend,build ui(can also be done by js ,css lib)
--makes easy to manage and build complex front end
-
-===why i learn react===
--after mastering js
--most project dont need react to initial phase
-
-===why react was created===
