@@ -26,3 +26,6 @@
 in this html we dont load scriopt tag so how js loads
 in package.json
 -react-scripts is responsible  for loading js in index.html
+
+////////////notein this we make .js file as elememnts and also do .jsx
+//write components in uppercase
