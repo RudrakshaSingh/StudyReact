@@ -3,7 +3,7 @@ npm-node package manager
 npx-node package executer when you want to directly execute without installing
 
 =>method(bulky utility)
-npx create-react-app basic_app  =>it takes too much time
+////npx create-react-app basic_app/////  =>it takes too much time
 cd basic-app
 package.json ->main entry point(dependencies,scripts etc)
 
