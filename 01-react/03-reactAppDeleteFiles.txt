@@ -6,4 +6,23 @@
     >index.css delete
 
 >src>index.js remove all comment ,import web vitals,import index.css
-    >app.js  remove import logo,import app.css,remove all div in return and wrte hello world in h1
+    >app.js  remove import logo,import app.css,remove all div in return and write return <h1>chai aur react</h1>;
+
+
+//public folder in 
+-favicon does not matter
+-manifest.json work on mobile devices for opening web application in mobile
+-robots for serach engine
+-single index file -spa
+
+
+//////////////NOTE//////////////
+
+//src folder-main entry point-index.js
+>src>index.js>react library-core foundational library for refrences
+             >react-dom- is implementation of react on web
+
+
+in this html we dont load scriopt tag so how js loads
+in package.json
+-react-scripts is responsible  for loading js in index.html
