@@ -1,0 +1,9 @@
+>src>setup.js delete
+    >reportwebvitals.js delete
+    >logo.svg delete
+    >apptest.js delete
+    >app.css delete
+    >index.css delete
+
+>src>index.js remove all comment ,import web vitals,import index.css
+    >app.js  remove import logo,import app.css,remove all div in return and wrte hello world in h1

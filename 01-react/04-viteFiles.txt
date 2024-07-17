@@ -1,0 +1,5 @@
+>src>assests dlete folder
+    >app.css delete
+    >index.css delte
+    >main.jsx remove import index.css
+    >app.jsx remove import logo,import usesate,import app.css,remove inside return and write return (<h1>chai aur react</h1>)

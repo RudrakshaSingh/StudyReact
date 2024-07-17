@@ -1,3 +1,5 @@
+react.dev =>new documentation of react
+
 ===WHY===
 -type,job trend,build ui(can also be done by js ,css lib)
 -makes easy to manage and build complex front end
