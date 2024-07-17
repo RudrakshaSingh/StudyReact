@@ -17,3 +17,7 @@ to render a js file as element you ned to start its element name with uppercase 
 we use fragment to solve it 
 <>
 </> empty tag
+
+//////////noteasas 
+you know app.jsx is a function you can diretcly write it in main.jsx and use it in that file and even use it like a function instead of jsxeg: app()
+but there may be optimization issue
