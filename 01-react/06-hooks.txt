@@ -1,0 +1,7 @@
+hooks is used to update data of variables in ui 
+
+useState   =>const [counter, setCounter] = useState(0); //counter is variable and setCounter is function given by reacrt to update counter
+useContext
+useReducer
+useEffect
+useMemos
