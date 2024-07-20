@@ -2,15 +2,16 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-    let [counter, setCounter] = useState(10);
+    const [counter, setCounter] = useState(10);
 
     //we are giving reference of add value as we want to execute on pressing
     //addValue() will directly execute it
     const addValue = () => {
-        if (counter == 20) {
+        if (counter >= 20) {
             return;
         }
         setCounter(counter + 1);
+        setCounter((prevCounter) => prevCounter + 1);
     };
     const removeValue = () => {
         if (counter == 0) {

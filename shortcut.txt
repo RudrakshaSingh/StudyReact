@@ -1,1 +1,3 @@
 rcfe   =>for react component
+
+array as const can be changed
