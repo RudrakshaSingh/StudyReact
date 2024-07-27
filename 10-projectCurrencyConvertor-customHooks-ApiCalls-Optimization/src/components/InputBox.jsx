@@ -28,7 +28,7 @@ function InputBox({
                     disabled={amountDisable} //if somebody passes true in it
                     value={amount}
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
-                    //we are using and as there is no default value which may crash it
+                    //we are using && and as if there is no default value which may crash it
                     //isse agar exist kata hai tabhi upse kaam krenge
                     //we are wrapping it in number as js returns string most of times
                 />
