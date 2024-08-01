@@ -1,0 +1,7 @@
+it stores all values in string
+so convert to json before use
+
+use same name foe key while getting and setting item
+
+inspect=>apllication=>local storage=
+>storage

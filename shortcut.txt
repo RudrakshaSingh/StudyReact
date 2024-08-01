@@ -19,3 +19,7 @@ and we can import just one file for mutiple components
 in file
 import { InputBox } from "./components";
 we dont need to add index.js for navigating as index file is called by default
+
+-----------------------------------------------------------
+
+for making a new array with one value not there use filter
