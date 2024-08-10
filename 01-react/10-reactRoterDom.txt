@@ -1,0 +1,119 @@
+documentation-reactrouter.com
+getting started-tutorial
+npm i react-router-dom
+
+Link=>in place of a tag as whenever a tag is used the whole page is refreshed
+-----------------------------------------------
+NavLink=>more features=note down to put curly in isactive=>When you use the className prop with a function, you need to use curly braces {} to denote that you're providing a JavaScript expression rather than a static string.
+
+<NavLink
+    to="/about"
+    className={({isActive}) =>
+        `block py-2 pr-4 pl-3 duration-200 ${
+            isActive ? "text-orange-700" : "text-gray-700"
+        } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+    }
+>
+class is given like those so that nav components does color highlighting whenever you are on same url /page as in component link goes over it
+method is to give classes on callback and manipulate its classes
+
+we get access to a variable isActive
+isActive tells if you are on active page with matching url
+
+------------------------------------------------------------
+<Outlet/>for dynamic changing middle component of page leaving footer and header
+import React from "react";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
+import { Outlet } from "react-router-dom";
+
+function Layout() {
+    return (
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
+    );
+}
+
+export default Layout;
+
+------------------------------------------------------------
+import { render } from "preact";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Layout />,
+        children: [
+            { path: "", element: <Home /> },
+            { path: "about", element: <About /> },
+        ],
+    },
+]);
+render(<RouterProvider router={router} />, document.getElementById("app"));
+-----------------------------------------------------------
+            <Route path="user/:userid" element={<User />}></Route>
+userid ka access user component ki file me mil jata hai 
+you have to use same name
+
+import React from "react";
+import { useParams } from "react-router-dom";
+function User() {
+    const { userid } = useParams();
+    return <div>User:{userid}</div>;
+}
+export default User;
+
+----------------------------------------------------
+API call optimization
+loader=>if you want to fetch data api, you can directly make api call from here,it will fetch even before useeffect when you click the url
+you can make the method in same component file that is using the route
+you have to use it with hook :useLoaderData
+*****
+<Route loader={githubInfoLoader} path="github" element={<Github />}></Route>
+*****
+import React from "react";
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+function Github() {
+    const data = useLoaderData();
+    // useEffect(() => {
+    //     fetch("https://api.github.com/users/RudrakshaSingh")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             console.log(data);
+    //             setData(data);
+    //         });
+    // }, []);
+
+    return (
+        <div className="text-center flex flex-col items-center  justify-center m-4 bg-gray-600 text-white p-4 text-3xl">
+            Github Followers : {data.followers}
+            <img className="my-5 rounded-full" src={data.avatar_url} alt="Git picture" width={300} />
+        </div>
+    );
+}
+export default Github;
+
+export const githubInfoLoader = async () => {
+    const response = await fetch("https://api.github.com/users/RudrakshaSingh");
+    return response.json();
+};
+----------------------------------------------
+nesting of routes
+<Route path="/" element={<Layout />}>
+            <Route path="" element={<Home />}/>
+            <Route path="about" element={<About />}/>
+            <Route path="contact" element={<Contact />}>
+                  <Route path="abnestingout" element={<About />}/>
+            </Route>
+            <Route path="user/:userid" element={<User />}/>
+            <Route loader={githubInfoLoader} path="github" element={<Github />}></Route>
+        </Route>
+
+all route will be loaded if only you have used outlet in layout file

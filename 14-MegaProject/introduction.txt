@@ -1,0 +1,13 @@
+for backend features we use:
+  ->  appwrite - it is openbase can use our own cloud also instead of theirs
+
+for secret variables we use:(environment variables)
+  ->  .env file
+
+rich Text editor ->tinymce in github
+  tiny cloud
+
+we are storing html but we cannot use it directly we need to parse
+  -> HTMLReactParser
+
+->React Hook Form-better way to handle forms - error control and easy foem handling

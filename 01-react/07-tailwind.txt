@@ -1,0 +1,31 @@
+tailwindcss.com
+-d in installing dependencies is for dev dependencies which is only in development phase
+
+
+/////////// install
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+////////////change this in tailwindcomfig file
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+////// this search for content in index.html and src
+
+///////////// inject tailwind in index.css by pasting 3 lines on top of file
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/////////////how to know tailwind is working
+go to app.jsx

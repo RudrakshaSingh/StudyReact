@@ -1,0 +1,16 @@
+//scenerio to create a counter and 2 button for increment and decrement
+after making this interviewer asks
+hooks is used to update data of variables in ui 
+
+useState   =>const [counter, setCounter] = useState(0); //counter is variable and setCounter is function given by reacrt to update counter
+it sends updates in ui in batches at single time so even if you do counter+1  multiple times
+he sees all this as same work it takes it as single
+        setCounter(counter + 1);
+        setCounter(counter + 1);
+        setCounter(counter + 1);
+to avoid this and make it work each timewe useContext
+        setCounter((prevCounter)=>prevCounter +1);
+        setCounter((prevCounter)=>prevCounter +1);
+        setCounter((prevCounter)=>prevCounter +1);
+prevCounter is just name for state prev value
+

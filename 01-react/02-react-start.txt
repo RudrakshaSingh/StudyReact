@@ -1,0 +1,39 @@
+=> start a new project
+npm-node package manager
+npx-node package executer when you want to directly execute without installing
+
+=>method(bulky utility)
+////npx create-react-app basic_app/////  =>it takes too much time
+cd basic-app
+package.json ->main entry point(dependencies,scripts etc)
+
+start script= development environment me chlane ke liye
+bild= in production  application work differently
+test=to run test cases
+eject=to eject react fromn your application and use different framework
+
+eslint=>for better coding
+
+browserlist=on which browser to work
+
+$$$$$ to start project
+put //ls in node and package ,json should be visible
+//npm run start
+
+//npm run build
+-make new build folder-all static assets and js written in react
+
+////////////faster method through vite/////////////
+
+//npm create vite@latest
+enter
+projectname
+enter'
+select framework=>react
+select javascript
+npm install
+
+this dont have node modules
+dev dependencies get removed before reaching client
+
+how to run=>npm run dev
