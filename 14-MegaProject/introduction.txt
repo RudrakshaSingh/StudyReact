@@ -20,3 +20,21 @@ dpendencies
    =>tiny-react=>HTMLReactParserform
 
    npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+
+
+-----------------acess env like this not directly------------------------------
+
+// Access environment variable directly
+
+use prefix => VITE_  
+and import like
+
+console.log(import.meta.env.VITE_APPWRITE_URL);
+---------------------------------------------------------------------------------------
+
+=>inside appwrite ,inside database, inside collection, update info add role 
+create articles structure with gui of appwrite
+
+also update setting for bucket
+
+createindex 

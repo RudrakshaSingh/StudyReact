@@ -1,0 +1,10 @@
+production grade method
+>src
+  >config
+    >>config.js
+      const config = {
+      appwriteUrl: String(import.meta.env.VITE_APPWRITE_URL),
+      };
+      //always in string //gurantees atleast we get string value important and even if empty it will be string
+      
+      export default config;
